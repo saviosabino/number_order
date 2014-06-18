@@ -8,11 +8,10 @@ class Order:
         self.lst += alist
 
     def calcMedia(self):
-        self.media = 0
-        lst, m = self.lst, self.media
-        for x in lst: m += x
-        m = float(m) / len(lst)
-        return m
+        media = 0
+        for x in self.lst: media += x
+        media = float(media) / len(self.lst)
+        return media
 
     def _quicksort(self,lst):
         if len(lst) <= 1: return lst

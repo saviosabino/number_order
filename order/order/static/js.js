@@ -32,7 +32,7 @@ $(document).ready(function(){
                     '<input size="5" type="text" id="val' + x + '" >')
             }
             $('#val1').focus();
-        } else {alert('Digite um número'), window.location ='/order/'}
+        } else {alert('Digite um número por favor'), window.location ='/order/'}
         event.preventDefault();
     })
 
