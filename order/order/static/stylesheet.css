@@ -1,9 +1,0 @@
-div.content {
-	position:absolute;
-    top: 20%;
-    left: 30%;
-    width:500px;
-    height:500px;
-    margin-top: 10px; /*set to a negative number 1/2 of your height*/
-    margin-left: 10px; /*set to a negative number 1/2 of your width*/
-}

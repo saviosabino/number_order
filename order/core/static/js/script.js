@@ -20,10 +20,12 @@ $(document).ready(function(){
     $('#divValues').hide();
     $('#divResult').hide();
     $('#inputQt').focus();
+    $('#links').hide();
 
-    $('#subQt').click(function(event){
+    $('#submitQt').click(function(event){
         $('#divQt').hide();
         $('#divValues').show();
+        $('#links').show();
         //show fields...
         var qtVal = $('#inputQt').val(); qtVal = parseInt(qtVal);
         if (!isNaN(qtVal)){
@@ -32,11 +34,11 @@ $(document).ready(function(){
                     '<input size="5" type="text" id="val' + x + '" >')
             }
             $('#val1').focus();
-        } else {alert('Digite um número por favor'), window.location ='/order/'}
+        } else {alert('Digite um número por favor'), window.location ='/'}
         event.preventDefault();
     })
 
-    $('#subValues').click(function(event){
+    $('#submitValues').click(function(event){
         $('#divValues').hide();
         $('#divResult').show();
         //show result
@@ -48,13 +50,12 @@ $(document).ready(function(){
         listVal = listVal.replace(',,', '');
         
         $.ajax({
-            url: '/order/result/',
-            data: {'listVal': listVal, csrfmiddlewaretoken: '{{ csrf_token }}'},
+            url: '/result/',
+            data: {'listVal': listVal},
             type: 'POST',
             success: function(retVal){
                 $('#divRes').html(retVal);
                 drawChart(arr);
-                
             },
             error: function(xhr, textStatus, errorThrown){
                 alert("Error: " +textStatus)

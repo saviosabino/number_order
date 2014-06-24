@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block body %}
+<div id="divQt" class="row">
+    <div class="col-md-12 text-center">
+        <form class="form-inline" role="form">
+            <h2>Quantos números pretende usar?</h2>
+            <div class="form-group">
+                <input type="text" id="inputQt"> 
+            </div>
+            <button type="submit" id="submitQt" class="btn btn-primary">Iniciar</button>
+        </form>
+    </div>
+</div>
+<div id="divValues" class="row">
+    <div class="col-md-12 text-center">
+        <form role="form">
+            <h2>Digite os valores para ordenar:</h2>
+            <div id="divFields" class="form-group"></div>
+            <button type="submit" id="submitValues" class="btn btn-primary">Calcular</button>
+        </form>
+    </div>
+</div>
+<div id="divResult" class="row">
+    <div class="col-md-6 text-center">
+        <div id ="divRes">
+            resultado
+        </div>
+    </div>
+    <div class="col-md-6 text-center">
+        <div id="chart_div"></div>
+            </div>
+</div> <!--row-->
+<br>
+<div id="links" class="row">
+    <div class="col-md-12 text-center">
+        <p><a href="/">Reiniciar</a></p>
+    </div>
+    <div class="col-md-6"> </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block header %}
+    <title>Ordenador</title>
+    {% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/land.css" rel="stylesheet">
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="/static/js/script.js"></script>
+    <script type="text/javascript" src="/static/js/ajax_setup.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <strong id="logo">Ordenação de números</strong>
+            </div>
+        </div>
+        {% block body %}
+            body
+        {% endblock %}
+    </div>
+</body>
+</html>
+
